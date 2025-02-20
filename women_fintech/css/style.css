@@ -1,0 +1,699 @@
+/* Variabile pentru culori - Mod deschis */
+:root {
+    --background-color: #EDEFDD !important;
+    --text-color: #392D2D;
+    --navbar-background-color: #C3989A !important;
+    --navbar-border-color: #C3989A;
+    --jumbotron-background-color: #FFF7F3;
+    --jumbotron-text-color: #453636;
+    --btn-primary-bg-color:  linear-gradient(90deg, #C3989A, #C3989A);
+    --btn-primary-border-color: #E6B8C0;
+    --card-background-color: #FFF7F3;
+    --card-border-color: #C3989A;
+    --member-card-accent-color: #C3989A;
+    --form-background-color: #FFF7F3;
+    --form-border-color: #C3989A;
+    --footer-background-color: #C3989A;
+    --footer-text-color: #FFF7F3;
+    --link-hover-color: #FFF7F3;
+}
+
+/* Variabile pentru culori - Mod întunecat */
+body[data-theme="dark"] {
+    --background-color: #1E1E1E !important;
+    --text-color: #D3D3D3 !important;
+    --navbar-background-color: #350825 !important;
+    --navbar-border-color: #350825 !important;
+    --jumbotron-background-color: #2C2C2C!important;
+    --jumbotron-text-color: #7C5060 !important;
+    --btn-primary-bg-color: linear-gradient(90deg, #7C5060, #7C5060) !important;
+    --btn-primary-border-color: #8C5A5A !important;
+    --card-background-color: #350825 !important;
+    --card-border-color: black !important;
+    --member-card-accent-color: black !important;
+    --form-background-color: #2C2C2C !important;
+    --form-border-color: #7C5060 !important;
+    --footer-background-color: #350825 !important;
+    --footer-text-color: #D3D3D3 !important;
+    --link-hover-color: #8C5A5A !important;
+}
+
+/* Setări generale */
+body {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    flex: 1;
+}
+
+/* Stil pentru header */
+.navbar-custom {
+    background-color: var(--navbar-background-color);
+    border-bottom: 2px solid var(--navbar-border-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 120px; /* Ajustează lățimea după preferințe */
+    height: auto; /* Menține proporțiile imaginii */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Tranziție pentru animații */
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-link:hover {
+    color: var(--link-hover-color) !important;
+}
+
+/* Stil pentru containerul jumbotron */
+.jumbotron {
+    background-color: var(--jumbotron-background-color);
+    color: var(--jumbotron-text-color);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stil pentru butonul Join Now */
+.btn-primary,
+.btn-danger{
+    background: var(--btn-primary-bg-color);
+    border-color: var(--btn-primary-border-color) !important;
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:focus,
+.btn-danger:focus{
+    outline: none;
+    box-shadow: 0 0 5px 2px var(--form-border-color) !important;
+}
+
+/*stil pentru member-card*/
+
+.member-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-background-color);
+    position: relative;
+    display: flex;
+}
+
+/* Left border accent */
+.member-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: var(--member-card-accent-color);
+    border-radius: 8px 0 0 8px;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.member-card h5 {
+    text-align: left;
+    color: var(--jumbotron-text-color);
+}
+
+.member-card p {
+    text-align: left;
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap:5px;
+}
+
+/* Stil pentru formular */
+.form-container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--form-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label{
+    color: var(--jumbotron-text-color);
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button{
+    border-radius: 6px;
+    border: 1px solid var(--form-border-color);
+}
+
+.form-container .form-control:focus{
+    outline: none;
+    border-color: var(--form-border-color);
+    box-shadow: 0 0 5px 2px var(--form-border-color);
+}
+
+.form-container button{
+    background-color: var(--form-border-color);
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Alte detalii de stil */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--jumbotron-text-color);
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stil pentru linkuri și butoane */
+a {
+    color: var(--jumbotron-text-color);
+}
+
+button, input, textarea {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.jumbotron {
+    animation: fadeIn 1s ease both;
+}
+
+/* Stilizarea dropdown-ului pentru sortare */
+#sort,
+#profession,
+#partner_id,
+#filter_online{
+    max-width: 250px;
+    background-color: var(--form-background-color);
+    border: 1px solid var(--form-border-color);
+    border-radius: 6px;
+    padding: 8px;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Când dropdown-ul este selectat */
+#sort:focus,
+#profession:focus,
+#partner_id:focus{
+    outline: var(--form-border-color);
+    border-color: var(--form-border-color);
+    box-shadow: 0 0 5px var(--link-hover-color);
+}
+
+/* Stilizare pentru opțiunile din dropdown */
+#sort option,
+#profession option{
+    padding: 10px;
+    background-color: var(--form-background-color);
+    color: var(--text-color);
+}
+
+/* Stilizarea etichetei pentru dropdown */
+label[for="sort"],
+label[for="profession"],
+label[for="partner_id"]{
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    /*color: #C3989A;*/
+    background-color: var(--navbar-background-color) !important;
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a.active {
+    background-color: var(--link-hover-color);
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*font-weight: bold;*/
+}
+
+.pagination a:hover {
+    background-color: var(--link-hover-color);
+    color: white;
+}
+
+.pagination .prev, .pagination .next {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*font-weight: bold;*/
+}
+
+.profile-picture-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Stil pentru footer */
+.footer {
+    background-color: var(--footer-background-color);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid var(--navbar-border-color);
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Input-ul pentru căutare */
+.search-container input[type="text"],
+.search input[type="text"]{
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid var(--form-border-color);
+    border-radius: 6px;
+    background-color: var(--form-background-color);
+    color: var(--text-color);
+}
+
+/* Stil la focus pentru input */
+.search-container input[type="text"]:focus,
+.search input[type="text"]:focus{
+    outline: none;
+    border-color: var(--navbar-background-color);
+    box-shadow: 0 0 5px 2px var(--link-hover-color);
+}
+
+
+/* Stilizarea pentru evenimente */
+.events-list,
+.resources-list,
+.jobs-list,
+.track-progress-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.event-item,
+.resources-item,
+.jobs-item,
+.track-progress-card{
+    background-color: var(--card-background-color);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover,
+.resources-item:hover,
+.jobs-item:hover,
+.track-progress-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-item h3,
+.resources-item h3,
+.jobs-item h3,
+.track-progress-card h3{
+    color: var(--jumbotron-text-color);
+}
+
+.event-item p,
+.resources-item p,
+.jobs-item p,
+.track-progress-card p{
+    color: var(--text-color);
+}
+
+/* Stil pentru detalii eveniment */
+.event-details {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2 {
+    color: var(--jumbotron-text-color);
+}
+
+.event-details p {
+    color: var(--text-color);
+}
+
+
+/* Stil pentru calendar */
+#calendar {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--form-background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizare formular feedback */
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--form-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--form-border-color);
+}
+
+.feedback-form textarea,
+.feedback-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--form-border-color);
+    background-color: var(--form-background-color);
+    color: var(--text-color);
+    font-family: "Faculty Glyphic", sans-serif;
+    font-size: 16px;
+}
+
+.feedback-form textarea:focus,
+.feedback-form input[type="number"]:focus {
+    outline: none;
+    border-color: var(--form-border-color);
+    box-shadow: 0 0 5px 2px var(--form-border-color);
+}
+
+.feedback-form #feedback-btn {
+    background-color: var(--member-card-accent-color);
+    border-color: var(--btn-primary-border-color);
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: var(--link-hover-color);
+    transform: scale(1.05);
+}
+
+.feedback-form input[type="number"]::placeholder,
+.feedback-form textarea::placeholder {
+    color: var(--text-color);
+}
+
+.feedback-form input[type="number"] {
+    max-width: 100px;
+}
+
+.feedback-form .form-container {
+    padding: 0;
+    margin: 0;
+}
+
+.feedback-form input[type="hidden"] {
+    display: none;
+}
+
+.filter-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.form-container-events,
+.form-container-programari,
+.form-container-update-progress{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--form-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--form-border-color);
+}
+
+.form-container-events label,
+.form-container-programari label,
+.form-container-update-progress label{
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-container-events input,
+.form-container-events textarea,
+.form-container-programari input,
+.form-container-programari select,
+.form-container-update-progress input,
+.form-container-update-progress select,
+.form-container-update-progress textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--form-border-color);
+    background-color: var(--form-background-color);
+    color: var(--text-color);
+    font-family: "Faculty Glyphic", sans-serif;
+}
+
+.form-container-events input:focus,
+.form-container-events textarea:focus,
+.form-container-programari input:focus,
+.form-container-programari select:focus,
+.form-container-update-progress input:focus,
+.form-container-update-progress select:focus,
+.form-container-update-progress textarea:focus{
+    outline: none;
+    border-color: var(--form-border-color);
+    box-shadow: 0 0 5px 2px var(--form-border-color);
+}
+
+.form-container-events button,
+.form-container-programari button,
+.form-container-update-progress button{
+    background-color: var(--btn-primary-bg-color);
+    border-color: var(--btn-primary-border-color);
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.form-container-events button:hover,
+.form-container-programari button:hover,
+.form-container-update-progress button:hover{
+    background-color: var(--link-hover-color);
+}
+
+.form-container-events button:focus,
+.form-container-programari button:focus,
+.form-container-update-progress button:focus{
+    outline: none;
+    box-shadow: 0 0 5px 2px var(--form-border-color);
+}
+
+/* Alert pentru mesaje */
+.alert {
+    background-color: var(--navbar-background-color);
+    color: var(--footer-text-color);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Card general pentru pagina de detalii */
+.profile-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-background-color);
+    margin: 20px auto; /* Centrare pe pagină */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aliniere centrală pentru conținut */
+}
+
+/* Imaginea de profil - stil consistent */
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ajustează dimensiunea imaginii */
+    border-radius: 6px; /* Colțuri ușor rotunjite */
+    margin-bottom: 20px; /* Spațiu între imagine și text */
+    border: 2px solid var(--form-border-color); /* Bordură definită */
+}
+
+/* Textul din profil */
+.profile-text-container {
+    width: 100%; /* Lățime completă pentru text */
+}
+
+.profile-text-container p {
+    margin: 10px 0; /* Spațiu între paragrafe */
+    line-height: 1.5; /* Înălțime de linie consistentă */
+}
+
+/* Header pentru numele utilizatorului */
+.profile-text-container h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    text-align: center; /* Aliniere la centru pentru nume */
+}
+
+/* Butoane */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Butoanele să fie distribuite uniform */
+    margin-top: 20px;
+    width: 100%; /* Lățime completă */
+}
+
+.button-container a {
+    padding: 10px 20px; /* Dimensiune consistentă */
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: var(--member-card-accent-color); /* Fundal consistent */
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Eliminăm sublinierea */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container a:hover {
+    background-color: var(--link-hover-color); /* Schimbare de culoare pe hover */
+    transform: scale(1.05); /* Efect de mărire */
+}
+
+#add-event-btn,
+#edit-event-btn,
+#register-btn{
+    background: var(--btn-primary-bg-color);
+    border: 1px solid var(--btn-primary-border-color);
+    color: white;
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
