@@ -1,3 +1,2 @@
 ﻿# WomenFintech
-Aplicație web pentru susținerea și promovarea femeilor în domeniul tehnologiei
-financiare, utilizând HTML, PHP și MySQL.
+Web application to support and promote women in financial technology, using HTML, PHP and MySQL.
